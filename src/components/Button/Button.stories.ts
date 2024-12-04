@@ -16,5 +16,6 @@ export const Basic: Story = {
         label: 'Hello world',
         onPress: () => console.log('Hello Woooooorld!'),
         disabled: false,
+        textStyle: {}
     },
 };

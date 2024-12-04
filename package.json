@@ -8,11 +8,12 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "storybook": "STORYBOOK=true react-native start",
+    "storybook": "storybook dev -p 6006",
     "storybook:android": "STORYBOOK=true react-native start run-android",
     "storybook:ios": "STORYBOOK=true react-native start run-ios",
     "storybook:web": "npx storybook dev -p 6006",
-    "storybook-generate": "sb-rn-get-stories"
+    "storybook-generate": "sb-rn-get-stories",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "react": "18.3.1",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.26.3",
     "@babel/runtime": "^7.25.0",
     "@chromatic-com/storybook": "^3",
     "@gorhom/bottom-sheet": "^5.0.6",
@@ -36,11 +38,18 @@
     "@react-native/eslint-config": "0.76.3",
     "@react-native/metro-config": "0.76.3",
     "@react-native/typescript-config": "0.76.3",
+    "@storybook/addon-essentials": "^8.4.6",
+    "@storybook/addon-interactions": "^8.4.6",
+    "@storybook/addon-onboarding": "^8.4.6",
     "@storybook/addon-ondevice-actions": "^8.4.2",
     "@storybook/addon-ondevice-controls": "^8.4.2",
     "@storybook/addon-react-native-web": "^0.0.26",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.4.6",
+    "@storybook/react": "^8.4.6",
     "@storybook/react-native": "^8.4.2",
     "@storybook/react-webpack5": "^8.4.6",
+    "@storybook/test": "^8.4.6",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
@@ -48,6 +57,7 @@
     "babel-plugin-react-native-web": "^0.19.13",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "eslint": "^8.19.0",
+    "eslint-plugin-storybook": "^0.11.1",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-dom": "^18.3.1",
@@ -56,6 +66,7 @@
     "react-native-safe-area-context": "^4.14.0",
     "react-native-svg": "^15.10.0",
     "react-test-renderer": "18.3.1",
+    "storybook": "^8.4.6",
     "typescript": "5.0.4"
   },
   "engines": {
